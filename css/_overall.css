@@ -1,0 +1,24 @@
+/* Общие стили для элементов сайта */
+.container {
+  max-width: 1663px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.logo {
+  /* min-height: 600px; */
+  width: 173px;
+  height: 39.9px;
+  background-image: url(/img/logo.svg);
+  background-position: center;
+  background-size: cover;
+  background-position: no-repeat;
+}

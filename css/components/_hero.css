@@ -1,0 +1,12 @@
+.hero {
+  margin-top: 100px;
+  height: 100vh;
+  min-height: 600px;
+  background-image: url(/img/hero_main.jpg);
+  background-position: center;
+  background-size: cover;
+  background-position: no-repeat;
+}
+
+
+
