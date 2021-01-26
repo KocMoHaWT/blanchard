@@ -1,9 +1,12 @@
 .header {
-  /* position: absolute; */
-  /* z-index: 100; */
-  /* top: 0; */
-  /* left: 0; */
-  /* width: 100%; */
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-top {
   background-color: var(--black);
 }
 
@@ -19,7 +22,7 @@
 }
 
 .menu__item:last-child {
-  /* margin-right: 100px; */
+  margin-right: 100px;
 }
 
 .menu__link {
@@ -57,31 +60,227 @@
   background: rgba(0, 0, 0, 0.4);
 }
 
-header-bottom__menu {
+.header-bottom-container {
+  padding-top: 22px;
+  /* padding-bottom: 22px; */
+  justify-content: space-between;
   align-items: center;
 }
 
-.header-bottom__item{
+.dropdown__item{
   margin-right: 97px;
 }
 
-.search__btn {
-
-}
-
-.search-form__input {
-  margin: 25px 0;
-  padding-bottom: 4px;
-  width: 225px;
-  border: none;
-  border-bottom: 1px solid var(--white);
-  opacity: 0.85;
+.choices__inner {
+  padding: 0;
+  padding-right: 12px;
   background: transparent;
+  border: 0;
+  min-height: auto;
+  color: aliceblue;
 }
 
-.search-form__input::placeholder {
+.choices[data-type*=select-one] .choices__inner {
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.choices[data-type*=select-one]:after {
+
+  right: 2px;
+  top: 17%;
+  margin: 0;
+  height: 8px;
+  width: 8px;
+  border-width: 1px;
+  border-top-color: transparent;
+  border-bottom-color: var(--white);
+  border-left-color: var(--white);
+  transform: rotate(-45deg);
+}
+
+.choices[data-type*=select-one].is-open:after {
+  right: 2px;
+  top: 27%;
+  margin: 0;
+  height: 8px;
+  width: 8px;
+  border-width: 1px;
+  border-bottom-color: var(--white);
+  border-left-color: var(--white);
+  transform: rotate(135deg);
+}
+
+.choices__item {
+  /* text-align: center; */
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--white);
+}
+
+.choices__placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 1;
+}
+
+.choices__list {
+  padding-left: 0;
+}
+
+.choices__list--dropdown {
+  padding: 40px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 0;
+}
+
+.choices__list--dropdown .choices__item {
+  padding-left: 14px;
+}
+
+
+.choices__item choices__item--choice {
+  height: 40px;
+  width: 220px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.choices__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+
+#choices--selectRealism-item-choice-1,
+#choices--selectImpressionism-item-choice-1,
+#choices--selectPostimpressionism-item-choice-1,
+#choices--selectAvantgarde-item-choice-1,
+#choices--selectFuturism-item-choice-1 {
+  display:none;
+}
+
+/* Realism */
+#choices--selectRealism-item-choice-2 {
+  background-image: url(/img/choice1_1.jpg);
+}
+
+#choices--selectRealism-item-choice-3 {
+  background-image: url(/img/choice1_2.jpg);
+}
+
+#choices--selectRealism-item-choice-4 {
+  background-image: url(/img/choice1_3.jpg);
+}
+
+#choices--selectRealism-item-choice-5 {
+  background-image: url(/img/choice1_4.jpg);
+}
+
+
+/* Impressionism */
+#choices--selectImpressionism-item-choice-2 {
+  background-image: url(/img/choice2_1.jpg);
+}
+
+#choices--selectImpressionism-item-choice-3 {
+  background-image: url(/img/choice2_2.jpg);
+}
+
+#choices--selectImpressionism-item-choice-4 {
+  background-image: url(/img/choice2_3.jpg);
+}
+
+#choices--selectImpressionism-item-choice-5 {
+  background-image: url(/img/choice2_4.jpg);
+}
+
+
+/* Postimpressionism */
+#choices--selectPostimpressionism-item-choice-2 {
+  background-image: url(/img/choice3_1.jpg);
+}
+
+#choices--selectPostimpressionism-item-choice-3 {
+  background-image: url(/img/choice3_2.jpg);
+}
+
+#choices--selectPostimpressionism-item-choice-4 {
+  background-image: url(/img/choice3_3.jpg);
+}
+
+#choices--selectPostimpressionism-item-choice-5 {
+  background-image: url(/img/choice3_4.jpg);
+}
+
+
+/* Avantgarde */
+#choices--selectAvantgarde-item-choice-2 {
+  background-image: url(/img/choice4_1.jpg);
+}
+
+#choices--selectAvantgarde-item-choice-3 {
+  background-image: url(/img/choice4_2.jpg);
+}
+
+#choices--selectAvantgarde-item-choice-4 {
+  background-image: url(/img/choice4_3.jpg);
+}
+
+#choices--selectAvantgarde-item-choice-5 {
+  background-image: url(/img/choice4_4.jpg);
+}
+
+
+/* Futurism */
+#choices--selectFuturism-item-choice-2 {
+  background-image: url(/img/choice5_1.jpg);
+}
+
+#choices--selectFuturism-item-choice-3 {
+  background-image: url(/img/choice5_2.jpg);
+}
+
+#choices--selectFuturism-item-choice-4 {
+  background-image: url(/img/choice5_3.jpg);
+}
+
+#choices--selectFuturism-item-choice-5 {
+  background-image: url(/img/choice5_4.jpg);
+}
+
+.choices__item choices__item--choice .is-highlighted {
+  border: 2px solid #fff;
+}
+
+
+
+
+.header__form {
+  width: 14%;
+  justify-content: space-between;
+}
+
+.search-form__btn {
+  width: 22.1px;
+  height: 21.62px;
+  background-image: url(/img/header_search.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.search-form__field {
+  padding-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.search-form__field::placeholder {
   font-size: 18px;
   line-height: 1;
-  color: var(--white);
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.85);
 }

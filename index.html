@@ -11,8 +11,12 @@
 <body>
   <div class="site-container">
     <header class="header">
+      <div class="header-top">
         <div class="container flex header-container">
-          <a href="/" class="header__logo logo" aria-lable="Логотип. Художественная галерея Блэнчард"></a>
+          <!-- <a href="/" class="header__logo logo" aria-lable="Логотип. Художественная галерея Блэнчард"></a> -->
+          <a href="/" class="header__logo logo">
+            <img src="/img/logo.svg" alt="Логотип" class="logo__img">
+          </a>
           <nav class="header__nav">
             <ul class="header__menu menu flex">
               <li class="menu__item">
@@ -42,71 +46,169 @@
         </div>
       </div>
       <div class="header-bottom">
-        <div class="container flex header-container">
-          <nav class="header-bottom__nav">
-            <ul class="header-bottom__menu flex">
-              <li class="header-bottom__item">
-                <select name="realism" id="selectRealism">
+        <div class="container flex header-bottom-container">
+          <nav class="header-bottom__dropdown">
+            <ul class="dropdown__list flex dropdown">
+              <li class="dropdown__item">
+                <select name="realism" id="selectRealism" class="header-select">
                   <option value="">Реализм</option>
-                  <option value="">Реализм</option>
-                  <option value="">Реализм</option>
+                  <option value="Тинторетто">Тинторетто</option>
+                  <option value="Фридрих">Фридрих</option>
+                  <option value="Леонардо">Леонардо</option>
+                  <option value="Верроккьо">Верроккьо</option>
+                  <option value="Верроккьо">Верроккьо</option>
+                  <option value="Верроккьо">Верроккьо</option>
+                  <option value="Верроккьо">Верроккьо</option>
                 </select>
               </li>
-              <li class="header-bottom__item">
-                <select name="impressionism" id="selectImpressionism">
+              <li class="dropdown__item">
+                <select name="impressionism" id="selectImpressionism" class="header-select">
                   <option value="">Импрессионизм</option>
-                  <option value="">Импрессионизм</option>
-                  <option value="">Импрессионизм</option>
+                  <option value="Моне">Моне</option>
+                  <option value="Сислей">Сислей</option>
+                  <option value="Мане">Мане</option>
+                  <option value="Ренуар">Ренуар</option>
                 </select>
               </li>
-              <li class="header-bottom__item">
-                <select name="postimpressionism" id="selectPostimpressionism">
+              <li class="dropdown__item">
+                <select name="postimpressionism" id="selectPostimpressionism" class="header-select">
                   <option value="">Постимпрессионизм</option>
-                  <option value="">Постимпрессионизм</option>
-                  <option value="">Постимпрессионизм</option>
+                  <option value="Ван Гог">Ван Гог</option>
+                  <option value="Сезанн">Сезанн</option>
+                  <option value="Гоген">Гоген</option>
+                  <option value="Сёра">Сёра</option>
                 </select>
               </li>
-              <li class="header-bottom__item">
-                <select name="avantgarde" id="selectAvantgarde">
+              <li class="dropdown__item">
+                <select name="avantgarde" id="selectAvantgarde" class="header-select">
                   <option value="">Авангард</option>
-                  <option value="">Авангард</option>
-                  <option value="">Авангард</option>
+                  <option value="Кандинский">Кандинский</option>
+                  <option value="Маринетти">Маринетти</option>
+                  <option value="Малевич">Малевич</option>
+                  <option value="Пикассо">Пикассо</option>
                 </select>
               </li>
-              <li class="header-bottom__item">
-                <select name="futurism" id="selectFuturism">
+              <li class="dropdown__item">
+                <select name="futurism" id="selectFuturism" class="header-select">
                   <option value="">Футуризм</option>
-                  <option value="">Футуризм</option>
-                  <option value="">Футуризм</option>
+                  <option value="Карра">Карра</option>
+                  <option value="Прателла">Прателла</option>
+                  <option value="Северини">Северини</option>
+                  <option value="Балла">Балла</option>
                 </select>
               </li>
             </ul>
           </nav>
-          <form action="" method="" class="search__form">
-            <button type="submit" class="search__btn btn" aria-label="Начать поиск"></button>
-            <label for="search-form-input" class="search-form__field">
-              <input type="search" name="search" class="search-form__input" id="search-form-input"
-                placeholder="Поиск по сайту">
-            </label>
+          <form action="/" method="" class="header__form flex search-form">
+            <button type="submit" class="search-form__btn btn-reset" aria-label="Начать поиск"></button>
+            <input type="search" name="search" class="search-form__field" placeholder="Поиск по сайту">
           </form>
         </div>
       </div>
-      <!-- </div> -->
     </header>
-
     <main class="main">
       <!-- Секция Hero -->
       <section class="hero">
-
-
+        <div class="container">
+          <h1 class="hero-title">Прикоснитесь к прекрасному</h1>
+          <p class="hero-descr descr">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
+            создаёт
+            предпосылки для новых предложений.</p>
+          <button class="hero-btn btn btn-reset">Подписаться на рассылку</button>
+        </div>
       </section>
     </main>
 
+    <!-- Секция US -->
+    <section class="us">
+      <div class="container">
+        <h2 class="us-title section-title">
+          О нас
+        </h2>
+        <p class="us-descr descr">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
+          Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
+          внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных
+          исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
+          учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
+          действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны
+          быть разоблачены.
+        </p>
+      </div>
+    </section>
 
+    <!-- Секция Gallery -->
+    <section class="gallery">
+      <div class="container gallety-container flex">
+        <div class="gallery-left flex">
+          <div class="gallery-left__top">
+            <h2 class="gallery-title section-title">
+              Галерея
+            </h2>
+            <label class="gallery-label" for="selectGallery">Фильтровать по:</label>
+            <select name="filter" id="selectGallery" class="gallery-select">
+              <option value="Автор">Автор</option>
+              <option value="Направление">Направление</option>
+              <option value="Техника">Техника</option>
+            </select>
+          </div>
+          <div class="gallery-left__bottom">
+            <p class="gallery-left__descr descr">
+              Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a
+                class="gallery-left__descr--wisteria" href="/">авторизуйтесь,</a> либо воспользуйтесь лицензией.
+            </p>
+          </div>
+        </div>
+        <div class="gallery-right">
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 1</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
   </div>
+
+
+  <script src="/libs/choices.min.js"></script>
+
+  <script src="/libs/swiper-bundle.min.js"></script>
+
+  <script src="/js/main.js"></script>
 </body>
 
 </html>
