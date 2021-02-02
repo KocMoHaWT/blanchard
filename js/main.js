@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function(){
 var mySwiper = new Swiper('.swiper-container', {
   slidesPerView: 3,
 
@@ -41,3 +42,4 @@ const headerSelect = () => {
 
 headerSelect ();
 
+});
